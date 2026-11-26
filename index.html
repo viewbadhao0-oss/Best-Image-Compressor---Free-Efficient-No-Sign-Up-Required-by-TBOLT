@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- BASIC SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Image Compressor Online – Reduce Image Size | TBolt</title>
+
+    <meta name="description"
+        content="Compress images online for free with TBolt. Reduce JPG, PNG and WebP image file sizes quickly. No sign up, no login and private browser-based image compression.">
+
+    <meta name="author" content="TBolt">
+
+    <meta name="application-name" content="TBolt Image Compressor">
+
+    <meta name="theme-color" content="#090713">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+    <!-- Replace YOUR_VERIFICATION_CODE with the exact code from Google Search Console -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+
+    <!-- OPTIONAL KEYWORDS: Google Search does not use this tag for ranking -->
+    <meta name="keywords" content="
+        free image compressor,
+        image compressor online,
+        compress image online,
+        reduce image size,
+        image size reducer,
+        photo compressor,
+        online photo compressor,
+        JPG compressor,
+        JPEG compressor,
+        PNG compressor,
+        WebP compressor,
+        compress JPG,
+        compress JPEG,
+        compress PNG,
+        compress WebP,
+        reduce JPG file size,
+        reduce PNG file size,
+        reduce photo size,
+        image optimizer,
+        photo size reducer,
+        image compression tool,
+        free image optimizer,
+        no sign up image compressor,
+        no login image compressor,
+        browser based image compressor,
+        online image resizer,
+        TBolt image compressor
+    ">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- OPEN GRAPH / SOCIAL SHARING -->
+    <meta property="og:type" content="website">
+
+    <meta property="og:title"
+        content="Free Image Compressor Online – Reduce Image Size | TBolt">
+
+    <meta property="og:description"
+        content="Compress JPG, PNG and WebP images for free. Easy to use, no signup required.">
+
+    <meta property="og:site_name" content="TBolt">
+
+    <!-- TWITTER / X CARD -->
+    <meta name="twitter:card" content="summary">
+
+    <meta name="twitter:title"
+        content="Free Image Compressor Online | TBolt">
+
+    <meta name="twitter:description"
+        content="Reduce image file sizes online for free with TBolt Image Compressor.">
+
+    <!-- PERFORMANCE -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TBolt Image Compressor",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "description": "A free browser-based image compressor for JPG, PNG and WebP images. No registration required.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="#" class="brand">
+                TBolt
+            </a>
+
+            <span class="header-badge">
+                Free Online Tool
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <p class="eyebrow">
+                FAST • FREE • NO SIGN UP
+            </p>
+
+            <h1>
+                Best Image Size Compressor Online
+            </h1>
+
+            <p class="hero-description">
+                Compress images online for free with TBolt.
+                Reduce the file size of your JPG, PNG and WebP
+                images in seconds without installing any software.
+                No account or registration required.
+            </p>
+
+        </section>
+
+
+        <!-- TOP AD SPACE -->
+        <div class="ad-slot ad-slot-top">
+
+            <span class="ad-label">Advertisement</span>
+
+            <div class="ad-placeholder">
+                Ad Space
+            </div>
+
+        </div>
+
+
+        <!-- COMPRESSOR TOOL -->
+        <section class="compressor-card">
+
+            <div class="card-heading">
+
+                <h2>
+                    Compress Your Image
+                </h2>
+
+                <p>
+                    Upload an image and choose your compression settings.
+                </p>
+
+            </div>
+
+
+            <!-- UPLOAD AREA -->
+            <div class="upload-area" id="drop-area">
+
+                <div class="upload-icon">
+                    <span>↑</span>
+                </div>
+
+                <h3>
+                    Drop your image here
+                </h3>
+
+                <p>
+                    Or select an image from your device
+                </p>
+
+                <button
+                    type="button"
+                    class="browse-button"
+                    id="browse-button">
+
+                    Browse Image
+
+                </button>
+
+                <input
+                    type="file"
+                    id="image-input"
+                    accept="image/jpeg,image/png,image/webp"
+                    hidden>
+
+                <p class="file-hint">
+                    Supported: JPG, JPEG, PNG, WebP • Maximum 20 MB
+                </p>
+
+            </div>
+
+
+            <!-- SETTINGS -->
+            <div class="settings-grid">
+
+                <div class="setting-field">
+
+                    <label for="output-format">
+                        Output Format
+                    </label>
+
+                    <select id="output-format">
+
+                        <option value="image/webp">WebP</option>
+
+                        <option value="image/jpeg">JPG</option>
+
+                        <option value="image/png">PNG</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="setting-field">
+
+                    <label for="quality">
+                        Compression Quality:
+                        <span id="quality-value">75%</span>
+                    </label>
+
+                    <input
+                        type="range"
+                        id="quality"
+                        min="10"
+                        max="100"
+                        value="75">
+
+                    <div class="range-labels">
+
+                        <span>Smaller Size</span>
+
+                        <span>Better Quality</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPRESS BUTTON -->
+            <button
+                type="button"
+                class="compress-button"
+                id="compress-button"
+                disabled>
+
+                Compress Image
+
+            </button>
+
+
+            <p class="privacy-note">
+                Your images are processed directly in your browser.
+                They are not uploaded to our server.
+            </p>
+
+
+            <!-- ERROR MESSAGE -->
+            <p
+                class="error-message"
+                id="error-message"
+                hidden>
+            </p>
+
+
+            <!-- RESULT SECTION -->
+            <section
+                class="result-section"
+                id="result-section"
+                hidden>
+
+                <div class="result-heading">
+
+                    <h2>
+                        Compression Result
+                    </h2>
+
+                    <p id="saving-label" class="saving-label">
+                    </p>
+
+                </div>
+
+
+                <div class="preview-grid">
+
+                    <!-- ORIGINAL IMAGE -->
+                    <div class="preview-card">
+
+                        <h3>
+                            Original Image
+                        </h3>
+
+                        <img
+                            id="original-preview"
+                            src=""
+                            alt="Original uploaded image preview">
+
+                        <p id="original-size">
+                            0 KB
+                        </p>
+
+                    </div>
+
+
+                    <!-- COMPRESSED IMAGE -->
+                    <div class="preview-card">
+
+                        <h3>
+                            Compressed Image
+                        </h3>
+
+                        <img
+                            id="compressed-preview"
+                            src=""
+                            alt="Compressed image preview">
+
+                        <p id="compressed-size">
+                            0 KB
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DOWNLOAD BUTTON -->
+                <a
+                    id="download-button"
+                    class="download-button"
+                    href="#"
+                    download="compressed-image">
+
+                    Download Compressed Image
+
+                </a>
+
+            </section>
+
+        </section>
+
+
+        <!-- MIDDLE AD SPACE -->
+        <div class="ad-slot ad-slot-middle">
+
+            <span class="ad-label">Advertisement</span>
+
+            <div class="ad-placeholder">
+                Ad Space
+            </div>
+
+        </div>
+
+
+        <!-- BENEFITS -->
+        <section class="benefits">
+
+            <h2>
+                Why Use TBolt Image Compressor?
+            </h2>
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">⚡</div>
+
+                <h3>
+                    Fast Image Compression
+                </h3>
+
+                <p>
+                    Compress your images quickly using your browser.
+                    No complicated steps or software installation.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">🔒</div>
+
+                <h3>
+                    Private and Secure
+                </h3>
+
+                <p>
+                    Image processing happens directly on your device.
+                    Your selected images are not uploaded to our server.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">🆓</div>
+
+                <h3>
+                    Completely Free
+                </h3>
+
+                <p>
+                    Use the image compressor without paying,
+                    creating an account or signing in.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">🖼️</div>
+
+                <h3>
+                    Multiple Image Formats
+                </h3>
+
+                <p>
+                    Work with JPG, JPEG, PNG and WebP images
+                    and select your preferred output format.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEO CONTENT -->
+        <section class="about-tool">
+
+            <h2>
+                Free Online Image Compressor
+            </h2>
+
+            <p>
+                TBolt Image Compressor is a free online tool that helps
+                you reduce image file sizes without installing additional
+                software. You can compress JPG, JPEG, PNG and WebP images
+                directly in your browser.
+            </p>
+
+
+            <h3>
+                Compress JPG and JPEG Images
+            </h3>
+
+            <p>
+                Reduce the file size of JPG and JPEG photos by selecting
+                your preferred output quality. Smaller image files can
+                make sharing and storing photos more convenient.
+            </p>
+
+
+            <h3>
+                Compress PNG Images
+            </h3>
+
+            <p>
+                Use TBolt to convert images into PNG format.
+                PNG output is useful when you need lossless image encoding,
+                although it may not always produce a smaller file.
+            </p>
+
+
+            <h3>
+                Convert Images to WebP
+            </h3>
+
+            <p>
+                WebP is a modern image format supported by many browsers.
+                You can choose WebP as your output format and adjust
+                compression quality.
+            </p>
+
+
+            <h3>
+                No Signup or Installation Required
+            </h3>
+
+            <p>
+                Start compressing images without creating an account.
+                TBolt works directly in your browser, making it convenient
+                for students, creators, website owners and everyday users.
+            </p>
+
+
+            <h3>
+                How to Compress an Image?
+            </h3>
+
+            <p>
+                First, upload your image using the browse button or
+                drag-and-drop area. Next, select an output format and
+                compression quality. Click the Compress Image button
+                and download your compressed result.
+            </p>
+
+        </section>
+
+
+        <!-- BOTTOM AD SPACE -->
+        <div class="ad-slot ad-slot-bottom">
+
+            <span class="ad-label">Advertisement</span>
+
+            <div class="ad-placeholder">
+                Ad Space
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 TBolt. All rights reserved.
+            </p>
+
+            <p>
+                Free Online Image Compressor
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
