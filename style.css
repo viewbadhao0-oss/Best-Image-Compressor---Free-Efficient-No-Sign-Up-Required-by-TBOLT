@@ -602,3 +602,24 @@ body {
         max-width: 100%;
     }
 }
+
+/* TOP AD - 160x300 */
+
+.ad-slot.ad-slot-top {
+    min-height: 330px;
+    padding: 12px;
+}
+
+.adsterra-banner-top {
+    width: 160px;
+    min-height: 300px;
+    margin: 12px auto;
+}
+
+/* MIDDLE AD - 160x600 */
+
+.adsterra-banner {
+    width: 160px;
+    max-width: 100%;
+    overflow: hidden;
+}
