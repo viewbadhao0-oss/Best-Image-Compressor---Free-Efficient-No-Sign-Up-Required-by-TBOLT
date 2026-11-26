@@ -1,7 +1,6 @@
-
 // ==========================================
 // TBOLT IMAGE COMPRESSOR
-// Fixed Image Selection + Preview
+// Updated: File Selection Confirmation
 // ==========================================
 
 const fileInput = document.getElementById("image-input");
@@ -23,6 +22,10 @@ const compressedSize = document.getElementById("compressed-size");
 
 const savingLabel = document.getElementById("saving-label");
 const downloadButton = document.getElementById("download-button");
+
+// Selected file confirmation elements
+const selectedFileInfo = document.getElementById("selected-file-info");
+const selectedFileName = document.getElementById("selected-file-name");
 
 let selectedFile = null;
 let originalURL = null;
@@ -113,23 +116,35 @@ function loadImage(file) {
 
     clearError();
 
+    // Hide previous file confirmation
+    if (selectedFileInfo) {
+        selectedFileInfo.hidden = true;
+    }
+
     if (!file) return;
 
     const imageType = getImageType(file);
 
     if (!imageType) {
         showError("Please select a JPG, PNG or WebP image.");
+        compressButton.disabled = true;
+        selectedFile = null;
         return;
     }
 
     if (file.size > 20 * 1024 * 1024) {
         showError("Image size must be less than 20 MB.");
+        compressButton.disabled = true;
+        selectedFile = null;
         return;
     }
 
     selectedFile = file;
 
     resetResults();
+
+    compressButton.disabled = true;
+    compressButton.textContent = "Loading Image...";
 
     if (originalURL) {
         URL.revokeObjectURL(originalURL);
@@ -144,6 +159,15 @@ function loadImage(file) {
         compressButton.disabled = false;
         compressButton.textContent = "Compress Image";
 
+        // Show selected file confirmation after successful loading
+        if (selectedFileInfo && selectedFileName) {
+
+            selectedFileName.textContent =
+                file.name + " • " + formatBytes(file.size);
+
+            selectedFileInfo.hidden = false;
+        }
+
     };
 
     originalPreview.onerror = function() {
@@ -151,6 +175,13 @@ function loadImage(file) {
         showError("Could not display this image. Please try another file.");
 
         compressButton.disabled = true;
+        compressButton.textContent = "Compress Image";
+
+        selectedFile = null;
+
+        if (selectedFileInfo) {
+            selectedFileInfo.hidden = true;
+        }
 
     };
 
@@ -367,7 +398,7 @@ compressButton.addEventListener("click", async function() {
 
     } finally {
 
-        compressButton.disabled = false;
+        compressButton.disabled = !selectedFile;
         compressButton.textContent = "Compress Image";
     }
 });
@@ -380,6 +411,11 @@ compressButton.addEventListener("click", async function() {
 compressButton.disabled = true;
 
 qualityValue.textContent = qualitySlider.value + "%";
+
+if (selectedFileInfo) {
+    selectedFileInfo.hidden = true;
+}
+
 
 // ==========================================
 // END
