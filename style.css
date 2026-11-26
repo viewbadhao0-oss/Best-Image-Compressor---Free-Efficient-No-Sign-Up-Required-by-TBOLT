@@ -146,6 +146,31 @@ body {
     min-height: 55px;
 }
 
+/* ADSTERRA BANNER */
+
+.ad-slot.ad-slot-middle {
+    min-height: 630px;
+    padding: 12px;
+}
+
+.adsterra-banner {
+    width: 160px;
+    min-height: 600px;
+    max-width: 100%;
+
+    margin: 12px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: hidden;
+}
+
+.adsterra-banner iframe {
+    max-width: 100%;
+}
+
 /* MAIN COMPRESSOR CARD */
 
 .compressor-card {
@@ -566,5 +591,14 @@ body {
 
     .ad-slot {
         min-height: 55px;
+    }
+
+    .ad-slot.ad-slot-middle {
+        min-height: 630px;
+    }
+
+    .adsterra-banner {
+        width: 160px;
+        max-width: 100%;
     }
 }
